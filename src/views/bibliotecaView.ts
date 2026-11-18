@@ -30,10 +30,11 @@ export class BibliotecaView {
     this.app.innerHTML = `
       <header class="encabezado">
         <span class="etiqueta">Un rincón para lectores</span>
-        <h1>📚 Club de Lectura Secreto</h1>
+        <h1>Club de Lectura Secreto</h1>
         <p>Comparte tus lecturas y opiniones de forma anónima.</p>
       </header>
 
+      <div id="notificacion" role="status" aria-live="polite" hidden></div>
       <main>
         <section class="panel">
           <h2>Registrar libro</h2>
@@ -404,6 +405,9 @@ export class BibliotecaView {
   }
 
   mensaje(texto: string): void {
-    alert(texto);
+  const notificacion = this.campo<HTMLDivElement>('notificacion');
+
+  notificacion.textContent = texto;
+  notificacion.hidden = false;
   }
 }

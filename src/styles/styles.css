@@ -201,3 +201,15 @@ footer {
     padding: 18px;
   }
 }
+#notificacion {
+  background-color: #fff3e0;
+  color: #654321;
+  border: 1px solid #e6c99a;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+#notificacion[hidden] {
+  display: none;
+}
