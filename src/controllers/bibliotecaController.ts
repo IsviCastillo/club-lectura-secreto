@@ -85,6 +85,12 @@ export class BibliotecaController {
 
       this.view.limpiarLibro();
       this.actualizarVista();
+
+      this.view.mensaje(
+        id === null
+          ? 'Libro registrado correctamente.'
+          : 'Libro actualizado correctamente.'
+);
     });
   }
 
@@ -94,6 +100,7 @@ export class BibliotecaController {
       this.view.limpiarLibro();
       this.view.limpiarResena();
       this.actualizarVista();
+      this.view.mensaje('Libro eliminado correctamente.');
     });
   }
 
@@ -135,6 +142,12 @@ export class BibliotecaController {
       this.view.limpiarResena();
       this.actualizarVista();
     });
+
+    this.view.mensaje(
+      id === null
+        ? 'Reseña publicada correctamente.'
+        : 'Reseña actualizada correctamente.'
+    );
   }
 
   private eliminarResena(id: number): void {
@@ -142,6 +155,7 @@ export class BibliotecaController {
       ResenaModel.delete(id);
       this.view.limpiarResena();
       this.actualizarVista();
+      this.view.mensaje('Reseña eliminada correctamente.');
     });
   }
 }
