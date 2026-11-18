@@ -1,6 +1,6 @@
 #  Club de Lectura Secreto
 
-Proyecto desarrollado para el **Laboratorio #3 de la asignatura Persistencia de Datos**, noviembre de 2026.
+Proyecto desarrollado para el **Laboratorio #3 POE**, noviembre de 2026.
 
 ##  Descripción
 
