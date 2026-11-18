@@ -141,13 +141,12 @@ export class BibliotecaController {
 
       this.view.limpiarResena();
       this.actualizarVista();
+      this.view.mensaje(
+        id === null
+          ? 'Reseña publicada correctamente.'
+          : 'Reseña actualizada correctamente.'
+      );
     });
-
-    this.view.mensaje(
-      id === null
-        ? 'Reseña publicada correctamente.'
-        : 'Reseña actualizada correctamente.'
-    );
   }
 
   private eliminarResena(id: number): void {
